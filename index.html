@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROI Portfólio</title>
+    <link rel="icon" type="image/png" href="./public/images/logo.ico" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+
+   
+  </head>
+  <body>
+    
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+      <i class="bi bi-sun" style="color: #fbbf24"></i>
+      <i class="bi bi-moon" style="color: #818cf8"></i>
+    </button>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand font-weight-bold" href="#head">ROI Portfólio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#head">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#formacoes">Formações</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projetos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Habilidades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header with Infinite Grid -->
+    <div class="infinite-grid-header" id="head">
+      <!-- Decorative Blur Spheres -->
+      <div class="blur-sphere blur-orange"></div>
+      <div class="blur-sphere blur-indigo"></div>
+      <div class="blur-sphere blur-blue"></div>
+
+      <!-- Background Grid Layer -->
+      <svg class="grid-layer grid-background" id="gridBackground">
+        <defs>
+          <pattern id="grid-pattern-bg" patternUnits="userSpaceOnUse">
+            <path fill="none" stroke="var(--grid-color)" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid-pattern-bg)" />
+      </svg>
+
+      <!-- Active Grid Layer (Mouse-revealed) -->
+      <svg class="grid-layer grid-active" id="gridActive">
+        <defs>
+          <pattern id="grid-pattern-active" patternUnits="userSpaceOnUse">
+            <path fill="none" stroke="var(--grid-active)" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid-pattern-active)" />
+      </svg>
+
+      <!-- Content -->
+      <div class="header-content">
+        <h1>RIZIK ISSUFO</h1>
+        <p class="subtitle">SOFTWARE DEVELOPER</p>
+        <p class="description">ETHICAL HACKER - INICIANTE</p>
+        <p class="description">GESTOR DE EMPRESAS</p>
+
+        <!-- Social Links -->
+        <div class="social-links">
+          <a
+            href="https://github.com/Rizik-Issufo"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="bi bi-github" style="font-size: 1.25rem"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/rizik-ossemane-issufo"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="bi bi-linkedin" style="font-size: 1.25rem"></i>
+          </a>
+          <a href="mailto:rizikissufo@gmail.com" class="social-link">
+            <i class="bi bi-envelope" style="font-size: 1.25rem"></i>
+          </a>
+          <a
+            href="https://wa.me/258840584001"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="bi bi-whatsapp" style="font-size: 1.25rem"></i>
+          </a>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="cta-buttons">
+          <a
+            href="./docs/Rizik_Issufo_CV.pdf"
+            download="Rizik Issufo CV"
+            class="btn-primary-custom"
+          >
+            Baixar Currículo
+          </a>
+          <a href="#projects" class="btn-secondary-custom"> Ver Projetos </a>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <i class="bi bi-chevron-down" style="font-size: 2rem"></i>
+      </div>
+    </div>
+
+    <!-- Grid Density Control -->
+    <div class="grid-control">
+      <div class="grid-control-title">
+        <i class="bi bi-sliders"></i>
+        Densidade da Grid
+      </div>
+      <input type="range" id="gridSizeControl" min="20" max="100" value="40" />
+      <div class="grid-control-labels">
+        <span>Densa</span>
+        <span id="gridSizeValue">Esparsa (40px)</span>
+      </div>
+    </div>
+
+    <!-- Content Sections (Placeholders) -->
+    <section
+      class="content-section"
+      id="formacoes"
+      style="background-color: var(--bg-color)"
+    >
+      <div class="container">
+        <h2 class="section-title">Formações</h2>
+        <!-- <p class="text-center" style="color: var(--text-muted)"> -->
+          <div class="row">
+
+  <!-- CARD 1 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Desenvolvimento Web Completo</h5>
+        <p class="card-text">HTML, CSS, Bootstrap, JavaScript e PHP.</p>
+        <small class="text-muted">2024 - Udemy</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Banco de Dados MySQL</h5>
+        <p class="card-text">Modelagem, consultas SQL e otimização.</p>
+        <small class="text-muted">2023 - Coursera</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Java Backend Developer</h5>
+        <p class="card-text">APIs REST, Spring Boot e arquitetura MVC.</p>
+        <small class="text-muted">2024 - Alura</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 4 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Cibersegurança Básica</h5>
+        <p class="card-text">Fundamentos de ethical hacking e segurança.</p>
+        <small class="text-muted">2025 - Cisco</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 5 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Git e GitHub</h5>
+        <p class="card-text">Versionamento de código e colaboração.</p>
+        <small class="text-muted">2023 - GitHub Learning</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD 6 -->
+  <div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">UI/UX Design</h5>
+        <p class="card-text">Experiência do usuário e design de interfaces.</p>
+        <small class="text-muted">2024 - Google UX</small>
+      </div>
+    </div>
+  </div>
+
+<!-- </div> -->
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section" id="projects">
+  <div class="container">
+    <h2 class="section-title">Projetos</h2>
+
+    <div class="row">
+
+      <!-- PROJETO 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card project-card h-100 shadow-sm">
+          <img src="C:/Users/roi/Desktop/ADOWNLOAD.jpeg" class="card-img-top" alt="Projeto">
+          <div class="card-body">
+            <h5 class="card-title">Sistema de Subscrição</h5>
+            <p class="card-text">
+              Sistema completo com PHP, MySQL e envio de emails com PHPMailer.
+            </p>
+
+            <div class="mb-2">
+              <span class="badge badge-primary">PHP</span>
+              <span class="badge badge-secondary">MySQL</span>
+              <span class="badge badge-dark">Bootstrap</span>
+            </div>
+
+            <a href="#" class="btn btn-sm btn-primary">Ver Demo</a>
+            <a href="#" class="btn btn-sm btn-outline-dark">Código</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJETO 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card project-card h-100 shadow-sm">
+          <img src="C:/Users/roi/Desktop/ADOWNLOAD.jpeg" class="card-img-top" alt="Projeto">
+          <div class="card-body">
+            <h5 class="card-title">Portfólio Dinâmico</h5>
+            <p class="card-text">
+              Portfólio com área admin para gestão de projetos e conteúdos.
+            </p>
+
+            <div class="mb-2">
+              <span class="badge badge-primary">JavaScript</span>
+              <span class="badge badge-secondary">Firebase</span>
+              <span class="badge badge-dark">HTML</span>
+            </div>
+
+            <a href="#" class="btn btn-sm btn-primary">Ver Demo</a>
+            <a href="#" class="btn btn-sm btn-outline-dark">Código</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJETO 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card project-card h-100 shadow-sm">
+          <img src="C:/Users/roi/Desktop/ADOWNLOAD.jpeg" class="card-img-top" alt="Projeto">
+          <div class="card-body">
+            <h5 class="card-title">Sistema de Deduplicação</h5>
+            <p class="card-text">
+              Sistema para reduzir uso de banda no upload de ficheiros grandes.
+            </p>
+
+            <div class="mb-2">
+              <span class="badge badge-primary">Java</span>
+              <span class="badge badge-secondary">Algoritmos</span>
+              <span class="badge badge-dark">Redes</span>
+            </div>
+
+            <a href="#" class="btn btn-sm btn-primary">Ver Demo</a>
+            <a href="#" class="btn btn-sm btn-outline-dark">Código</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <section class="content-section" id="skills">
+  <div class="container">
+    <h2 class="section-title">Habilidades</h2>
+
+    <div class="row">
+
+      <!-- FRONTEND -->
+      <div class="col-md-6 mb-4">
+        <div class="card p-4 shadow-sm">
+          <h5 class="mb-3"><i class="bi bi-code-slash"></i> Frontend</h5>
+
+          <p>HTML</p>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-primary" style="width: 90%">90%</div>
+          </div>
+
+          <p>CSS</p>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-success" style="width: 85%">85%</div>
+          </div>
+
+          <p>JavaScript</p>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-warning" style="width: 80%">80%</div>
+          </div>
+
+          <p>Bootstrap</p>
+          <div class="progress">
+            <div class="progress-bar bg-info" style="width: 90%">90%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BACKEND -->
+      <div class="col-md-6 mb-4">
+        <div class="card p-4 shadow-sm">
+          <h5 class="mb-3"><i class="bi bi-server"></i> Backend</h5>
+
+          <p>PHP</p>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-primary" style="width: 85%">85%</div>
+          </div>
+
+          <p>Java</p>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-success" style="width: 80%">80%</div>
+          </div>
+
+          <p>MySQL</p>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-warning" style="width: 75%">75%</div>
+          </div>
+
+          <p>Firebase</p>
+          <div class="progress">
+            <div class="progress-bar bg-info" style="width: 70%">70%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OUTRAS -->
+      <div class="col-md-12">
+        <div class="card p-4 shadow-sm">
+          <h5 class="mb-3"><i class="bi bi-tools"></i> Outras Competências</h5>
+
+          <div class="row text-center">
+
+            <div class="col-md-3 col-6 mb-3">
+              <i class="bi bi-git" style="font-size:2rem;"></i>
+              <p>Git</p>
+            </div>
+
+            <div class="col-md-3 col-6 mb-3">
+              <i class="bi bi-github" style="font-size:2rem;"></i>
+              <p>GitHub</p>
+            </div>
+
+            <div class="col-md-3 col-6 mb-3">
+              <i class="bi bi-shield-lock" style="font-size:2rem;"></i>
+              <p>Cibersegurança</p>
+            </div>
+
+            <div class="col-md-3 col-6 mb-3">
+              <i class="bi bi-diagram-3" style="font-size:2rem;"></i>
+              <p>Algoritmos</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="content-section" id="formacao-profissional">
+  <div class="container">
+    <h2 class="section-title">Formação Profissional</h2>
+
+    <div class="timeline">
+
+      <!-- ITEM 1 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card p-4 shadow-sm">
+          <h5>Licenciatura em Desenvolvimento de Software</h5>
+          <p class="mb-1">Saint Thomas University of Mozambique</p>
+          <small class="text-muted">2021 - Presente</small>
+          <p class="mt-2">
+            Formação focada em desenvolvimento web, engenharia de software,
+            bases de dados, algoritmos e arquitetura de sistemas.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card p-4 shadow-sm">
+          <h5>Curso de Desenvolvimento Web Fullstack</h5>
+          <p class="mb-1">Plataforma Online</p>
+          <small class="text-muted">2024</small>
+          <p class="mt-2">
+            Aprendizagem prática de HTML, CSS, JavaScript, PHP e integração com bases de dados.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card p-4 shadow-sm">
+          <h5>Introdução à Cibersegurança</h5>
+          <p class="mb-1">Cisco Networking Academy</p>
+          <small class="text-muted">2025</small>
+          <p class="mt-2">
+            Conceitos de segurança, redes, ethical hacking e proteção de sistemas.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+    <section
+      class="content-section"
+      id="contact"
+      style="background-color: var(--bg-color)"
+    >
+      <div class="container">
+        <!-- <h2 class="section-title">Contacto</h2> -->
+        <p class="text-center" style="color: var(--text-muted)">
+         <section class="content-section contact-section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Contacto</h2>
+
+    <div class="row">
+
+      <!-- INFORMAÇÕES -->
+      <div class="col-md-5 mb-3">
+
+        <div class="card p-4 shadow-sm mb-2 text-center">
+          <i class="bi bi-telephone" style="font-size: 1.8rem;"></i>
+          <h5>Telefone</h5>
+          <p>+258 84 058 4001 || +258 87 000 0000</p>
+        </div>
+
+        <div class="card p-4 shadow-sm mb-2 text-center">
+          <i class="bi bi-envelope" style="font-size: 1.8rem;"></i>
+          <h5>Email</h5>
+          <p>rizikissufo@gmail.com</p>
+        </div>
+
+        <div class="card p-4 shadow-sm text-center">
+          <i class="bi bi-geo-alt" style="font-size: 1.8rem;"></i>
+          <h5>Localização</h5>
+          <p>Maputo, Moçambique</p>
+        </div>
+
+      </div>
+
+      <!-- FORMULÁRIO -->
+      <div class="col-md-7">
+
+        <div class="card p-5 shadow-sm">
+
+          <h5 class="mb-2">Envie uma mensagem</h5>
+
+          <form>
+
+            <div class="form-group">
+              <label>Nome</label>
+              <input type="text" class="form-control" placeholder="Seu nome">
+            </div>
+
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="Seu email">
+            </div>
+
+            <div class="form-group">
+              <label>Mensagem</label>
+              <textarea class="form-control" rows="5" placeholder="Escreva sua mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Enviar Mensagem
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p class="mb-0">
+          &copy; 2025 <a href="#head">ROI Portfólio</a>. Todos os direitos
+          reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
